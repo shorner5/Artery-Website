@@ -28,26 +28,22 @@ function populateCards() {
 }
 
 function decorateElem(elem, i) {
-		console.log(i);
-		elem.zIndex(i + 1);
-		var name = document.querySelector("#container").querySelector("#card").querySelector("#card-info");
-		var img_src = document.querySelector("#container").querySelector("#card").querySelector("#card-image");
-		$(name).html(names[i]);
-		console.log(images[i] + names[i]);
-		img_src.src = images[i];
-		setDraggable(elem);
+	elem.zIndex(i + 1);
+	var name = document.querySelector("#container").querySelector("#card").querySelector("#card-info");
+	var img_src = document.querySelector("#container").querySelector("#card").querySelector("#card-image");
+	$(name).html(names[i]);
+	img_src.src = images[i];
+	setDraggable(elem);
 }
 
 function onSwipe(distance, elem) {
 	if (distance > 200) {
-		console.log("right");
 				 elem.animate({
                 left: '150%',
             }, 400 );
 		elem.draggable( "destroy" );
 	}
 	else if (distance < -300) {
-		console.log("left");
 		 elem.animate({
                 left: '-150%',
             }, 400 );
