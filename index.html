@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
 <html>
+	<title>Artery</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
 	<head>
 		<link href='main.css' rel='stylesheet'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
@@ -11,27 +14,25 @@
   		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 		<script src="js/app.js"></script>
-		<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-		<script src="js/qTransform.js"></script>
+		<script src="js/QTransform.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
 	</head>
 
-	<body>
+	<body onresize="resize()">
 		<h1>
-			<img src='img/artery no background.png' alt="Artery Logo" style="width:100px;height:100px;" align="top">
+			<img id="logo" src='img/artery no background.png' alt="Artery Logo">
 			Artery
 			<a href="http://arteryapp.com">
-				<img src='img/google-play-badge.png' style="width:258px;height:100px" align="right">
+				<img id="gp" src='img/google-play-badge.png'>
 			</a>
 		</h1>
 
 		<div id="container">
-			<div id="card"> 
-				<img id="card-image" src="img/final.jpg"> </img>
+			<div id="card">
 				<div id="card-info">Download the app</div>
 			</div>
-			<img class="easel" src='img/easel.png' alt="easel">
+			<img id="easel" src='img/easel.png' alt="easel">
 		</div>
-
 		<h2>Swipe left or right</h2>
 
 	</body>
